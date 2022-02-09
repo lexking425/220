@@ -1,5 +1,8 @@
 """
-
+Lex King
+lab4.py
+created a valintine's day card with a heart and a moving arrow going through it
+this is my code
 """
 from graphics import GraphWin, Polygon, Point, Text, Circle
 from time import sleep
