@@ -1,54 +1,67 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
-
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
-
-Certification of Authenticity:
-<include one of the following>
-I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
+Lex King
+hw6.py
+In this code we convert a number to cash format, encode words, get sphere area and volume, sum of number.
+this is my code
 """
 
-
+# converts a integer to a cash format
 def cash_converter():
-    pass
+    integer = eval(input("Enter an integer: "))
+    format = "That is ${:.2f}".format(integer)
+    print(format)
 
-
+# encodes a message
 def encode():
-    pass
+    message = input("Enter a message: ")
+    key = input("Enter a key: ")
+    # acc = " "
+    for i in message:
+        number = ord(message[i]) + key
+        coded = chr(number)
+        print(coded, end=' ')
 
+    #     old_value = ord(message[i]) - 65
+    #     shift = ord(key)
+    #     new_value = (old_value + shift) % 26
+    #     alpha = new_value + 65
+    #     final_val = chr(alpha)
+    #     acc = acc + final_val
+    # print(acc)
 
-def sphere_area(radius):
-    pass
+# finds the sphere area
+def sphere_area():
+    radius = eval(input("What is the radius of the sphere? "))
+    area = 4 * 3.14 * int(radius) ** 2
+    return area
 
-
-def sphere_volume(radius):
-    pass
+# finds volume of sphere
+def sphere_volume():
+    radius = eval(input("What is the radius of the sphere? "))
+    volume = 4/3 * 3.14 * (int(radius) ** 3)
+    return volume
 
 
 def sum_n(number):
-    pass
+    sum = 0
+    for i in range(1, number + 1):
+        sum += i
+    return sum
 
 
 def sum_n_cubes(number):
-    pass
+    sum_cubes = 0
+    for i in range(1, number + 1):
+        sum_cubes += i ** 3
+    return sum_cubes
 
-
+# this encodes the word dolphin
 def encode_better():
-    pass
+    message = input("Enter a message: ")
+    key = input("Enter a key: ")
+    for i in range(len(message)):
+        shift = ord(key[i]) - 97
+        coded = chr(ord(message[i]) + shift)
+        print(coded, end= " ")
 
 
-if __name__ == '__main__':
-    # cash_converter()
-    # encode()
-    # res = sphere_area(13)
-    # print(res)
-    # res = sphere_volume(13)
-    # print(res)
-    # res = sum_n(100)
-    # print(res)
-    # res = sum_n_cubes(13)
-    # print(res)
-    # encode_better()
-    pass
