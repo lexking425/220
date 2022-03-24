@@ -111,7 +111,7 @@ def play():
     elif winning_game(board,player2) is True:
         print("Player two wins!")
     else:
-        print("It is a tie!")
+        print("It is a draw!")
 
 def main():
     pass
