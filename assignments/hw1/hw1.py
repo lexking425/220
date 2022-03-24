@@ -1,7 +1,7 @@
 """
 Lex King
 hw1.py
-made codes to calculate the area, volume, shooting percentage, total amount of coffe, and converting kilometers to miles.
+made codes to calculate the area, volume, shooting percentage, total amount of coffee, and converting kilometers to miles.
 this is my code
 """
 
