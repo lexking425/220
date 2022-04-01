@@ -1,4 +1,4 @@
-a
+words = [
 ability
 able
 about
@@ -997,4 +997,4 @@ yet
 you
 young
 your
-yourself
+yourself]
