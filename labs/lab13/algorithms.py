@@ -1,9 +1,31 @@
 '''
 Lex King
-lab13.py
-this code alerts and warns the user when the stock market is moving.
+algorithms.py
+this lab reads the data from a file and searches the list.
 this is my code
 '''
+
+
+def read_data(file_name):
+    file = open(file_name, 'r')
+    lines = file.readline()
+    data = []
+    while lines != '':
+        split_line = lines.split()
+        counts = 0
+        while counts < len(split_line):
+            data.append(int(split_line[counts]))
+            counts += 1
+        lines = file.readline()
+    return data
+
+def is_in_linear(search_val, value):
+    counts = 0
+    while counts < len(value):
+        if search_val == value[counts]:
+            return True
+        counts += 1
+    return False
 
 def is_in_binary(search_val, values):
     midd = values[len(values) // 2]
@@ -24,14 +46,14 @@ def selection_sort(values):
         position = i
         for j in range(i, len(values)):
             if values[j] < lowest:
-                lowest = values[j]
+                lowest = values[x]
                 position = values.index(lowest)
             values[i], values[position] = values[position], values[i]
         return values
 
-def calc_area(rect):
-    height = abs(rect.getP1().getY() - rect.getP2().getY())
-    width = abs(rect.getP1().getX() - rect.getP2().getX())
+def calc_area(react):
+    height = abs(react.getP1().getY() - react.getP2().getY())
+    width = abs(react.getP1().getX() - react.getP2().getX())
     return height * width
 
 def react_sort(rectangles):
@@ -44,25 +66,3 @@ def react_sort(rectangles):
     for i in range(len(area)):
         rectangles[i] = val[i]
     return rectangles
-
-def trade_alert(filename):
-    file = open(filename, 'r')
-    read = file.read().split()
-    int = []
-    for i in read:
-        int.append(int(i))
-    sec = 0
-    for i in int:
-        sec += 1
-        if i > 830:
-            print("Alert at {} seconds! Value = {}".format(sec, i))
-        elif i > 500:
-            print("Warning at {} seconds! Value = {}".format(sec, i))
-
-if __name__ == '__main__':
-    trade_alert('trades.txt')
-
-
-
-
-
